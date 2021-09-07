@@ -150,8 +150,11 @@ function printLogHandler() {
   for (let i = 0; i < 3; i++) {
     console.log("------------");
   }
-  for (el of battleLog) {
-    console.log(el);
+  for (logEntry of battleLog) {
+    // console.log(el);
+    for (const key in logEntry) {
+      console.log(`${key}: ${logEntry[key]}`);
+    }
   }
   // console.log(battleLog);
 }
