@@ -1,0 +1,66 @@
+.db-header {
+  align-items: center;
+  display: flex;
+}
+
+.db-header__logo {
+  height: 50px;
+  margin-right: 20px;
+  width: 50px;
+}
+
+.db-header__title {
+  font-size: 26px;
+}
+
+:root {
+  --stair-spacer: 24px;
+}
+
+.container {
+	padding-left: 80px;
+}
+
+.stairs {
+	font-family: Impact, sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+	font-size: 64px;
+	color: #222636;
+	max-width: 600px;	
+}
+
+.stairs_step {
+	display: block;
+}
+
+.stairs_step:nth-child(2) {
+	padding-left: var(--stair-spacer);	
+}
+
+.stairs_step:nth-child(3) {
+	padding-left: calc(var(--stair-spacer) * 2);	
+}
+
+.stairs_step:nth-child(4) {
+	padding-left: calc(var(--stair-spacer) * 3);	
+}
+
+.stairs_step:nth-child(5) {
+	padding-left: calc(var(--stair-spacer) * 4);	
+}
+
+/* Add CSS rules below this line */
+
+.stairs_step:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(.66667);
+  margin-bottom: 8px;
+}
+.stairs_step:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.33333);
+  margin-bottom: 8px;
+}
+
+.stairs_step:nth-child(5) {
+  color: rgb(248, 107, 138);
+}
