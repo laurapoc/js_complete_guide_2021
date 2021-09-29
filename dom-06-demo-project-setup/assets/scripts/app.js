@@ -5,7 +5,6 @@ const cancelAddMovieButton = addMovieModal.querySelector(".btn--passive");
 const confirmAddMovieButton = cancelAddMovieButton.nextElementSibling;
 const userInputs = addMovieModal.querySelectorAll("input");
 
-
 const toggleBackdrop = () => {
   backdrop.classList.toggle("visible");
 };
@@ -30,9 +29,9 @@ const addMovieHandler = () => {
     +ratingValue < 1 ||
     +ratingValue > 5
   ) {
+    alert("Please enter valid values (rating between 1 and 5.)");
+    return;
   }
-  alert("Please enter valid values (rating between 1 and 5.)");
-  return;
 };
 
 const backdropClickHandler = () => {
